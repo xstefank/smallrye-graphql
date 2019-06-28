@@ -40,6 +40,7 @@ public class GraphQLListener implements ServletContextListener {
 
     @Inject
     private GraphQLSchema schema;
+
     @Inject
     @ConfigProperty(name = "mp.graphql.contextpath", defaultValue = DEFAULT_CONTEXT_PATH) // TODO: Check this key in the spec
     private String path;

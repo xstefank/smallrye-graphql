@@ -16,13 +16,14 @@
 
 package io.smallrye.graphql;
 
-import org.jboss.arquillian.container.test.spi.client.deployment.ApplicationArchiveProcessor;
+import org.jboss.arquillian.container.test.spi.client.deployment.AuxiliaryArchiveAppender;
 import org.jboss.arquillian.core.spi.LoadableExtension;
 
 public class SmallRyeGraphQLExtension implements LoadableExtension {
     @Override
     public void register(ExtensionBuilder builder) {
-        builder.service(ApplicationArchiveProcessor.class, SmallRyeGraphQLArchiveProcessor.class);
+        //        builder.service(ApplicationArchiveProcessor.class, SmallRyeGraphQLArchiveProcessor.class);
+        builder.service(AuxiliaryArchiveAppender.class, SmallRyeArchiveAppender.class);
     }
 
 }
